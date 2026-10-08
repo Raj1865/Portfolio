@@ -66,7 +66,7 @@ export default function MiniGame() {
       if (st.over) { reset(); return; }
       if (!st.running) { st.running = true; gameRef.current.play('power'); return; }
       if (st.onGround) {
-        st.vy = -12.5;
+        st.vy = -10.5;
         st.onGround = false;
         gameRef.current.play('jump');
       }
@@ -99,7 +99,7 @@ export default function MiniGame() {
       }
     };
 
-    const speed = () => 4.6 + Math.min(st.dist / 3000, 2.4);
+    const speed = () => 2.8 + Math.min(st.dist / 4000, 1.5);
 
     let raf = 0;
     const tick = () => {
@@ -112,7 +112,7 @@ export default function MiniGame() {
         if (st.frame % 30 === 0) gameRef.current.addScore(5);
 
         // gravity
-        st.vy += 0.65;
+        st.vy += 0.5;
         st.py += st.vy;
         if (st.py >= GROUND - 12 * PX) { st.py = GROUND - 12 * PX; st.vy = 0; st.onGround = true; }
 

@@ -14,11 +14,11 @@ import Contact from './sections/Contact';
 gsap.registerPlugin(ScrollTrigger);
 
 const MARQUEE = [
-  'AI ENGINEER', 'FULL-STACK DEV', 'COIN COLLECTOR', 'PIPE DODGER',
-  'PROMPT WHISPERER', 'PIXEL PERFECT', 'SHIPS ON TIME', 'OPEN TO WORK',
+  'AI ENGINEER', 'FULL-STACK DEV', 'SDE', 'PIXEL PERFECT', 'DESIGNER',
+  'COIN COLLECTOR', 'PROMPT WHISPERER', 'SHIPS ON TIME', 'PIPELINE STRATEGIES',
 ];
 
-const KONAMI = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+const KONAMI = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
 
 function Shell() {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -126,8 +126,8 @@ function Shell() {
       </main>
 
       <footer>
-        <span>© 2026 RAJ KOKATE · BUILT WITH REACT, THREE.JS &amp; AN UNHEALTHY LOVE OF PIXELS</span>
-        <span className="kon">CHEAT CODE: <b>↑↑↓↓←→←→BA</b></span>
+        <span>© 2026 RAJ KOKATE </span>
+        <span className="kon">CHEAT CODE: <b>↑↑↓↓← →← →BA</b></span>
       </footer>
     </div>
   );

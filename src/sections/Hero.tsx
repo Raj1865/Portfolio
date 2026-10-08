@@ -34,7 +34,7 @@ export default function Hero() {
         </div>
         <div className="reveal">
           <div className="player-card">
-            <span className="lvl">LV.25</span>
+            <span className="lvl">LV.21</span>
             <div className="frame">
               <img src="/assets/portrait.png" alt="Portrait of Raj Kokate" />
             </div>

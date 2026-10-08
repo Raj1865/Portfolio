@@ -1,39 +1,45 @@
 const QUESTS = [
   {
-    status: 'cleared', diff: '★★★',
-    title: 'Canopy',
-    desc: 'Task & project management with a calm, tree-structured UI. Nested boards, keyboard-first navigation, offline sync. Owned the roadmap and the repo.',
-    stack: 'REACT · TYPESCRIPT · INDEXEDDB',
+    status: 'cleared', diff: '★★★★★',
+    title: 'ThermaFL',
+    desc: 'Final Year Project. A federated learning approach for thermal imaging and advanced data analysis.',
+    stack: 'PYTHON',
+    link: 'https://github.com/Raj1865/ThermaFL',
   },
   {
     status: 'cleared', diff: '★★★★',
-    title: 'Migration',
-    desc: 'Multi-city travel planner with live collaboration. Mapped routes, budgets, and itineraries — and the WebSocket layer that keeps friends from double-booking hostels.',
-    stack: 'NODE.JS · POSTGRESQL · WEBSOCKETS',
+    title: 'Academic Burnout Prediction',
+    desc: 'Machine learning model predicting student burnout utilizing behavioral and academic metrics for early intervention.',
+    stack: 'JAVASCRIPT · ML',
+    link: 'https://github.com/Raj1865/Burnout_Prediction',
+  },
+  {
+    status: 'cleared', diff: '★★★★',
+    title: 'Depression Detector',
+    desc: 'NLP-driven tool designed to analyze and detect early signs of depression from textual inputs.',
+    stack: 'PYTHON · NLP',
+    link: 'https://github.com/Raj1865/Depression_Predictor',
   },
   {
     status: 'cleared', diff: '★★★',
-    title: 'Photosynthesis',
-    desc: 'Energy dashboard turning raw smart-meter data into charts a sustainability club actually checks. Data in, behavior change out.',
-    stack: 'D3.JS · PYTHON · FASTAPI',
-  },
-  {
-    status: 'cleared', diff: '★★★',
-    title: 'Tidepool',
-    desc: 'Lightweight community chat with channels, reactions, and end-to-end encrypted DMs. Small app, big opinions about message ordering.',
-    stack: 'REACT NATIVE · SOCKET.IO',
+    title: 'Anugrah',
+    desc: 'Responsive donation platform allowing users to submit item details, location, and images with secure authentication.',
+    stack: 'HTML · CSS · JS',
+    link: 'https://github.com/Raj1865/Anugrah',
   },
   {
     status: 'cleared', diff: '★★★★★',
-    title: 'Wildfire Watch',
-    desc: '36-hour hackathon boss fight: crowdsourced wildfire alerts on a live map. Beat 40 teams, won "Best Social Impact", slept eventually.',
-    stack: 'NEXT.JS · MAPBOX · TWILIO',
+    title: 'Safe Chain',
+    desc: 'Unified women\'s safety platform for filing complaints, SOS alerts, and secure routing with zero-knowledge proof.',
+    stack: 'JAVA · BLOCKCHAIN',
+    link: 'https://github.com/Raj1865/SafeChain',
   },
   {
-    status: 'wip', diff: '★★★★',
-    title: 'RAJ.EXE',
-    desc: 'The game you are literally playing right now. A portfolio with a score counter, because a PDF couldn\'t hold all of Raj Kokate\'s personality.',
-    stack: 'REACT · THREE.JS · CANVAS · WEBAUDIO',
+    status: 'cleared', diff: '★★★',
+    title: 'Banking Transaction App',
+    desc: 'Secure and scalable banking application built for handling transactions efficiently.',
+    stack: 'JAVA',
+    link: 'https://github.com/Raj1865/BankingTransactionApp',
   },
 ];
 
@@ -50,17 +56,27 @@ export default function Projects() {
       <div className="quest-grid">
         {QUESTS.map((q) => (
           <article className="quest reveal tilt" key={q.title}>
-            <div className="qtop">
-              <span className={`qstatus ${q.status === 'cleared' ? 'cleared' : 'wip'}`}>
-                {q.status === 'cleared' ? '✓ CLEARED' : '▶ IN PROGRESS'}
-              </span>
-              <span className="qdiff" title="Difficulty">{q.diff}</span>
-            </div>
-            <h3>{q.title}</h3>
-            <p>{q.desc}</p>
-            <div className="stack">{q.stack}</div>
+            <a href={q.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <div className="qtop">
+                <span className={`qstatus ${q.status === 'cleared' ? 'cleared' : 'wip'}`}>
+                  {q.status === 'cleared' ? '✓ CLEARED' : '▶ IN PROGRESS'}
+                </span>
+                <span className="qdiff" title="Difficulty">{q.diff}</span>
+              </div>
+              <h3 style={{ textDecoration: 'underline', textDecorationThickness: '2px', textUnderlineOffset: '4px' }}>
+                {q.title} ↗
+              </h3>
+              <p style={{ flex: 1 }}>{q.desc}</p>
+              <div className="stack">{q.stack}</div>
+            </a>
           </article>
         ))}
+      </div>
+      
+      <div style={{ textAlign: 'center', marginTop: '3rem' }} className="reveal">
+        <a href="https://github.com/Raj1865?tab=repositories" target="_blank" rel="noopener noreferrer" className="btn alt">
+          VIEW ALL REPOSITORIES
+        </a>
       </div>
     </section>
   );
